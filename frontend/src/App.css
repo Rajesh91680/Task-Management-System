@@ -1,0 +1,319 @@
+/* Reset & Base */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: #ffffff;
+  color: #202020;
+  font-size: 14px;
+}
+
+/* 🔹 PERFECT CENTERING FOR LOGIN & WELCOME */
+.center-screen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background-color: #fafafa;
+}
+
+.auth-card {
+  background: white;
+  padding: 40px;
+  width: 100%;
+  max-width: 380px;
+  border-radius: 12px;
+  border: 1px solid #e5e5e5;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.auth-input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-sizing: border-box;
+  font-size: 14px;
+  background-color: white;
+  color: black;
+}
+
+/* Layout */
+.app-layout {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 280px;
+  background-color: #fafafa;
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 30px;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.sidebar-logo {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.sidebar-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar-menu li {
+  padding: 10px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #202020;
+  margin-bottom: 2px;
+}
+
+.sidebar-menu li:hover {
+  background-color: #eeeeee;
+}
+
+.sidebar-menu li.active {
+  background-color: #ffeef0;
+  color: #db4c3f;
+  font-weight: bold;
+}
+
+/* Main Content */
+.main-content {
+  flex: 1;
+  padding: 50px 10%;
+  overflow-y: auto;
+  background-color: white;
+}
+
+.main-header {
+  border-bottom: 1px solid #f0f0f0;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+.main-header h1 {
+  margin: 0;
+  font-size: 26px;
+}
+
+/* 🔹 POLISHED TASK LIST */
+.task-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.task-item {
+  display: flex;
+  align-items: flex-start;
+  padding: 12px 0;
+  border-bottom: 1px solid #f0f0f0;
+  gap: 12px;
+}
+
+.task-checkbox {
+  width: 18px;
+  height: 18px;
+  border: 1px solid #808080;
+  border-radius: 50%;
+  margin-top: 2px;
+  cursor: pointer;
+}
+
+.task-checkbox:hover {
+  background-color: #eee;
+}
+
+.task-content {
+  flex: 1;
+}
+
+.task-content strong {
+  font-size: 14px;
+  color: #202020;
+}
+
+.task-description {
+  font-size: 12px;
+  color: #808080;
+  margin-top: 4px;
+}
+
+.task-date {
+  font-size: 12px;
+  color: #db4c3f; 
+  margin-top: 6px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* 🔹 HOVER ACTIONS (Like real Todoist) */
+.task-actions {
+  display: flex;
+  gap: 10px;
+  opacity: 0; /* Hidden by default */
+  transition: opacity 0.2s ease-in-out;
+}
+
+.task-item:hover .task-actions {
+  opacity: 1; /* Shows up when you hover over the task! */
+}
+
+/* Buttons */
+.add-task-btn-trigger {
+  color: #808080;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  padding: 10px 0;
+  margin-top: 10px;
+}
+
+.add-task-btn-trigger:hover {
+  color: #db4c3f;
+}
+
+.add-task-form {
+  border: 1px solid #e5e5e5;
+  border-radius: 10px;
+  padding: 15px;
+  margin-top: 10px;
+}
+
+.add-task-form input, .add-task-form textarea {
+  width: 100%;
+  border: none;
+  outline: none;
+  font-family: inherit;
+  box-sizing: border-box;
+}
+
+.add-task-form input[type="text"] {
+  font-weight: bold;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.add-task-form textarea {
+  font-size: 13px;
+  resize: none;
+  height: 50px;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+  border-top: 1px solid #f0f0f0;
+  padding-top: 10px;
+}
+
+.cancel-btn {
+  background: #f3f3f3;
+  color: #202020;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.add-btn {
+  background: #db4c3f; 
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.add-btn:hover { background: #c53727; }
+.cancel-btn:hover { background: #e5e5e5; }
+
+.action-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #808080;
+  font-size: 13px;
+}
+.action-btn:hover { color: #202020; }
+
+/* 🔹 COMPLETED TASK STYLES */
+.task-item.completed .task-content strong {
+  text-decoration: line-through;
+  color: #a0a0a0;
+}
+
+.task-item.completed .task-description,
+.task-item.completed .task-date {
+  opacity: 0.6;
+}
+
+/* 🔹 CHECKBOX CHECKED STYLE */
+.task-checkbox.checked {
+  background-color: #808080;
+  border-color: #808080;
+  position: relative;
+}
+
+/* Little white checkmark inside the circle */
+.task-checkbox.checked::after {
+  content: "✔";
+  color: white;
+  font-size: 12px;
+  position: absolute;
+  top: -1px;
+  left: 3px;
+}
+
+
+
+/* This fixes the black boxes in the Add/Edit task forms */
+.task-input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: white !important; /* Forces white background */
+  color: #333 !important;             /* Forces dark text */
+  font-size: 14px;
+  font-family: inherit;
+  resize: vertical; /* For textarea */
+}
+
+/* Ensures the date picker also looks clean */
+input[type="date"] {
+  background-color: white;
+  color: #333;
+}

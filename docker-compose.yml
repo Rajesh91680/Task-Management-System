@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+  # 1. The Database Container
+  db:
+    image: mongo:7.0
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db  # This saves your tasks so they don't delete on restart
+
+  # 2. The Django Backend Container
+  backend:
+    build: ./backend
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+
+  # 3. The React Frontend Container
+  frontend:
+    build: ./frontend
+    ports:
+      - "5173:5173"
+    depends_on:
+      - backend
+
+# This defines the hard drive space for MongoDB
+volumes:
+  mongo_data:
